@@ -28,23 +28,6 @@
 - CSS animations;
 - CSS transitions.
 
-## Структура проекта
-
-
-.
-├── index.html
-├── styles/
-│   └── styles.css
-├── scripts/
-│   └── script.js
-├── images/
-├── fonts/
-├── svg/
-│   └── sprite.svg
-├── favicon.ico
-├── favicon.svg
-└── apple-touch-icon.png
-
 ## Запуск проекта
 
 Для запуска проекта:
