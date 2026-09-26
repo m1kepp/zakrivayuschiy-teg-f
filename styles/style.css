@@ -1,0 +1,635 @@
+.page {
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-text);
+
+  color: #000;
+
+  background-image: var(--page-background);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header {
+  width: var(--content-width);
+  margin: 0 auto;
+
+  padding-block: var(--header-padding);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+.header__logo {
+  font-family: var(--font-accent);
+  font-size: var(--logo-size);
+
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.header__title {
+  margin: 0;
+
+  font-family: var(--font-accent);
+  font-size: var(--title-size);
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+
+.header__theme {
+  position: relative;
+
+  font-family: var(--font-accent);
+  font-size: 14px;
+}
+
+
+.header__rec {
+  position: relative;
+}
+
+
+.header__rec::after {
+  content: "";
+
+  display: inline-block;
+
+  width: 10px;
+  height: 10px;
+
+  margin-left: 10px;
+
+  border-radius: 50%;
+  background-color: red;
+}
+.content {
+  width: var(--content-width);
+  margin: 0 auto;
+}
+
+
+.cards {
+  display: flex;
+  flex-direction: column;
+
+  gap: 40px;
+}
+.card {
+
+  background-color: #fff;
+
+  border: 2px solid #000;
+
+  overflow: hidden;
+}
+
+
+.card__image-wrapper {
+
+  position: relative;
+
+}
+
+
+.card__image {
+
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+}
+
+
+.card__body {
+
+  padding: 20px;
+
+}
+
+
+.card__title {
+
+  margin: 0 0 20px;
+
+  font-size: 24px;
+
+  font-weight: 700;
+}
+
+
+.card__text {
+
+  margin: 0 0 20px;
+
+  font-size: 18px;
+
+  line-height: 1.4;
+}
+.card__actions {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+}
+
+
+.button {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 18px;
+  border: 2px solid #000;
+  background: transparent;
+  font-family: var(--font-main);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  isolation: isolate;
+}
+
+
+.button:hover .button__icon {
+
+  filter: invert(1);
+
+}
+
+.button::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: #000;
+
+  transform: translateX(-100%);
+
+  transition: transform 0.5s ease-in-out;
+
+  z-index: 0;
+
+}
+
+
+.button:hover::before {
+  transform: translateX(0);
+}
+
+.button__text,
+.button__icon {
+  position: relative;
+  z-index: 2;
+}
+
+.button__text {
+  color: #000;
+  transition: color 0.5s ease-in-out;
+}
+
+.button:hover .button__text {
+  color: #fff;
+}
+
+
+.button:focus {
+  outline: none;
+
+  box-shadow:
+    2px 2px 0 #000;
+}
+.button:focus {
+
+  outline: none;
+
+  box-shadow:
+    2px 2px 0 #000;
+
+}
+.card__image-wrapper {
+  position: relative;
+}
+
+
+.card__label {
+
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+
+  font-family: var(--font-accent);
+
+  font-size: 14px;
+
+  text-transform: uppercase;
+
+
+  color: transparent;
+
+
+  opacity: 0.7;
+
+
+  mix-blend-mode: hard-light;
+
+
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+
+}
+@supports (-webkit-text-stroke: 1px black) {
+
+  .card__label {
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+
+}
+
+
+@supports not (-webkit-text-stroke: 1px black) {
+
+  .card__label {
+    text-shadow:
+      1px 0 var(--text-stroke-color),
+      -1px 0 var(--text-stroke-color),
+      0 1px var(--text-stroke-color),
+      0 -1px var(--text-stroke-color);
+  }
+
+}
+.dialog {
+
+  width: min(90vw, 400px);
+
+  padding: 0;
+
+  border: 2px solid #000;
+
+  background: #fff;
+
+}
+
+
+.dialog::backdrop {
+
+  background: rgb(0 0 0 / 0.5);
+
+}
+
+
+.dialog__content {
+
+  padding: 30px;
+
+}
+
+
+.dialog__title {
+
+  margin: 0 0 20px;
+
+  font-family: var(--font-accent);
+
+  font-size: 20px;
+
+}
+
+
+.dialog__text {
+
+  margin-bottom: 30px;
+
+}
+
+.card__image_type-start {
+  filter: grayscale(40%);
+}
+
+
+.card__image_type-interest {
+  filter: sepia(50%);
+}
+
+
+.card__image_type-error {
+  filter: contrast(140%);
+}
+
+
+.card__image_type-progress {
+  filter: brightness(80%);
+}
+
+
+.card__image_type-practice {
+  filter: saturate(160%);
+}
+
+
+.card__image_type-experience {
+  filter: blur(1px);
+}
+
+
+.card__image_type-confidence {
+  filter: hue-rotate(40deg);
+}
+
+
+.card__image_type-finish {
+  filter:
+    contrast(120%)
+    brightness(90%);
+}
+.like-button {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 40px;
+
+  padding: 0;
+
+  border: 2px solid transparent;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.3s ease;
+
+}
+
+
+.like-button:focus {
+  outline: none;
+}
+
+
+.like-button:focus-visible {
+
+  border-color: var(--accent-color);
+
+}
+.like-icon {
+  width: 39px;
+  height: 36px;
+}
+
+.like-button {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 50px;
+
+  height: 40px;
+
+  padding: 0;
+
+  border: 2px solid transparent;
+
+  background: transparent;
+
+  cursor: pointer;
+
+}
+.core {
+
+  fill: transparent;
+
+  transition:
+    fill 0.3s linear 0.03s;
+
+}
+
+
+.main-body {
+
+  fill: transparent;
+
+  transition:
+    fill 0.3s linear;
+
+}
+
+
+.like-button:hover .core {
+
+  fill: #ff0000;
+
+  transition-delay: 0s;
+
+}
+
+
+.like-button:hover .main-body {
+
+  fill: #ff0000;
+
+  transition-delay: 0.05s;
+
+}
+
+.like-button:active .core {
+
+  fill: #ff0000;
+
+}
+
+
+.like-button:active .main-body {
+
+  fill: #ff0000;
+
+}
+
+.contour {
+
+  transition:
+    fill 0.1s linear;
+
+}
+
+
+.sparks {
+
+  opacity: 0;
+
+}
+
+
+.like-icon.is-liked .sparks {
+
+  animation: sparks-show 0.3s ease-in 0.3s;
+
+}
+
+.like-icon .core,
+.like-icon .main-body,
+.like-icon .contour {
+
+  transition:
+    fill 0.3s linear;
+
+}
+.like-icon.is-liked .core {
+
+  fill: #ff0000;
+
+}
+.like-icon.is-liked .main-body {
+
+  fill: #ff0000;
+
+  transition-delay: 0.05s;
+
+}
+.like-icon.is-liked .contour {
+
+  fill: #ff0000;
+
+  transition-delay: 0.1s;
+
+}
+.like-icon .heart {
+
+  transform-origin: center;
+
+}
+
+
+.like-icon.is-liked .heart {
+
+  animation: heart-scale 0.3s ease-in 0.1s;
+
+}
+
+.button__icon {
+  width: 21px;
+  height: 21px;
+
+  flex-shrink: 0;
+}
+
+.save-button {
+  gap: 8px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  background: #fff;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.like-text-button {
+
+  padding: 12px 18px;
+
+  border: 2px solid #000;
+
+  background: transparent;
+
+  font-family: var(--font-main);
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+}
+@media (width <= 375px) {
+
+  .header {
+
+    width: 100%;
+
+    padding-block: 30px;
+
+  }
+
+
+  .header__title {
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+  }
+
+
+  .content {
+
+    width: 100%;
+
+  }
+
+
+  .cards {
+
+    gap: 30px;
+
+  }
+
+
+  .card__body {
+
+    padding: 16px;
+
+  }
+
+
+  .card__title {
+
+    font-size: 20px;
+
+  }
+
+
+  .card__text {
+
+    font-size: 16px;
+
+  }
+
+
+  .card__actions {
+
+    flex-direction: column;
+
+  }
+
+
+  .dialog {
+
+    width: calc(100% - 40px);
+
+  }
+
+}
+
