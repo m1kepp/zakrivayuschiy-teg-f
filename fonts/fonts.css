@@ -1,13 +1,22 @@
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-Variable.woff2") format("woff2");
+
+  src:
+    url("Inter-Variable.woff2") format("woff2 supports variations"),
+    url("Inter-Variable.woff2") format("woff2-variations");
+
   font-weight: 100 900;
   font-style: normal;
 }
 
+
 @font-face {
   font-family: "PressStart2P";
-  src: url("../fonts/PressStart2P-Regular.woff2") format("woff2");
+
+  src: url("PressStart2P-Regular.woff2") format("woff2");
+
   font-weight: 400;
   font-style: normal;
-}/* В этом файле вы импортируете все шрифты для сайта. Один из них вариативный и требует особенной настройки */
+}
+
+/* В этом файле вы импортируете все шрифты для сайта. Один из них вариативный и требует особенной настройки */
