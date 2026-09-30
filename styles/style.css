@@ -16,30 +16,36 @@
 .header {
   width: var(--content-width);
   margin: 0 auto;
-
+  background-color: #fff;
+  border: 2px solid #000;
   padding-block: var(--header-padding);
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  gap: 20px;
+  padding-bottom: 80px;
+  gap: 4px;
 }
 
 
 .header__logo {
   font-family: var(--font-accent);
-  font-size: 22px;
+  font-size: 60px;
   text-decoration: none;
   color: inherit;
+  margin-bottom: 20px;
+  line-height: 1;
 }
 
 
 .header__title {
   margin: 0;
 
+  width: 100%;
+
   font-family: var(--font-accent);
-  font-size: var(--title-size);
+  font-size: clamp(18px, 2.8vw, 24px);
+
+  line-height: 0.9;
 
   font-variation-settings: "wght" 715;
 
@@ -47,6 +53,7 @@
 
   text-transform: uppercase;
 
+  white-space: nowrap;
 }
 
 .header__theme {
@@ -57,36 +64,9 @@
 }
 
 
-.header__rec {
-  position: relative;
-  font-family: var(--font-accent);
-  margin-top: 8px;
-
-}
-
-
-.header__rec::after {
-
-  content: "";
-
-  display: inline-block;
-
-  width: 8px;
-
-  height: 8px;
-
-  margin-left: 8px;
-
-  vertical-align: middle;
-
-  border-radius: 50%;
-  transform: translateY(-3px);
-  background-color: red;
-
-}
 .content {
   width: var(--content-width);
-  margin: 0 auto;
+  margin: 100px auto 0;
 }
 
 
@@ -235,10 +215,7 @@
 }
 
 .like-text-button .button__text {
-  position: relative;
-  z-index: 2;
   color: #000;
-  mix-blend-mode: difference;
 }
 
 
@@ -260,20 +237,21 @@
 
   text-transform: uppercase;
 
-  color: transparent;
+  color: #000;
 
-  opacity: 0.7;
+  opacity: 0.5;
 
   overflow-wrap: break-word;
 
   word-break: break-word;
 
-  -webkit-text-stroke: 1px var(--text-stroke-color);
+  
 
 }
 @supports (-webkit-text-stroke: 1px black) {
 
   .card__label {
+    
     -webkit-text-stroke: 1px var(--text-stroke-color);
   }
 
@@ -613,27 +591,27 @@
   outline: none;
 }
 @media (width <= 375px) {
-
-  .header {
-
-    width: 100%;
-
-    padding-block: 40px;
-
-    gap: 20px;
-
+  .header__logo {
+    font-size: 34px;
   }
-  .header__rec {
-
-    font-size: 14px;
+  .header {
+    
+    width: 100%;
+    box-sizing: border-box;
+    padding-block: 40px;
+    padding-bottom: 40px;
+    gap: 20px;
+    
 
   }
 
   .header__title {
 
-    font-size: 24px;
+    font-size: 18px;
 
-    line-height: 1.2;
+    line-height: 0.9;
+    max-width: 100%;
+    white-space: nowrap;
 
   }
   .content {
@@ -734,18 +712,7 @@
   }
 
 }
-@media (hover: hover) {
 
-  .button:focus {
-
-    outline: none;
-
-    box-shadow:
-      2px 2px 0 #000;
-
-  }
-
-}
 @media (hover: none) {
 
   .like-text-button {

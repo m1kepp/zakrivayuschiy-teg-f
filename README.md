@@ -1,3 +1,4 @@
+https://github.com/m1kepp/zakrivayuschiy-teg-f
 # Закрывающий тег
 
 Одностраничный сайт, посвящённый историям о разработке и пути создания проекта.
@@ -28,23 +29,6 @@
 - CSS animations;
 - CSS transitions.
 
-## Структура проекта
-
-
-.
-├── index.html
-├── styles/
-│   └── styles.css
-├── scripts/
-│   └── script.js
-├── images/
-├── fonts/
-├── svg/
-│   └── sprite.svg
-├── favicon.ico
-├── favicon.svg
-└── apple-touch-icon.png
-
 ## Запуск проекта
 
 Для запуска проекта:
@@ -57,3 +41,4 @@
 
 Проект выполнен в рамках учебного задания по веб-разработке.
 Шикунов Михаил Владимирович ФиБ 2025.
+https://m1kepp.github.io/zakrivayuschiy-teg-f/
